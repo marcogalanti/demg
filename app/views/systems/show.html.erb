@@ -1,0 +1,22 @@
+<% add_title :showing.l(name: 'System') %>
+<dl>
+  <dt>Name:</dt>
+  <dd><%= @system.name %></dd>
+  <dt>Type:</dt>
+  <dd><%= @system.type %></dd>
+  <dt>Serial:</dt>
+  <dd><%= @system.serial %></dd>
+  <dt>Version:</dt>
+  <dd><%= @system.version %></dd>
+  <dt>Endpoint:</dt>
+  <dd><%= @system.endpoint %></dd>
+  <dt>Ipaddress:</dt>
+  <dd><%= @system.ipaddress %></dd>
+  <dt>Accessmethod:</dt>
+  <dd><%= @system.accessmethod %></dd>
+</dl>
+<p>
+  <%= link_to :edit.l, edit_system_path(@system) %>
+  |
+  <%= link_to :back.l, systems_path %>
+</p>

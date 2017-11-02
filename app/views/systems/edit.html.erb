@@ -1,0 +1,9 @@
+<% add_title :editing.l(name: 'System') %>
+
+<%= render 'form', system: @system %>
+
+<p>
+  <%= link_to :show.l, @system %>
+  |
+  <%= link_to :back.l, systems_path %>
+</p>

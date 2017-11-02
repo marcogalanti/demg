@@ -1,0 +1,37 @@
+<% add_title 'Systems' %>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Serial</th>
+    <th>Version</th>
+    <th>Endpoint</th>
+    <th>Ipaddress</th>
+    <th>Accessmethod</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @systems.each do |system| %>
+  <tr>
+    <td><%= system.name %></td>
+    <td><%= system.type %></td>
+    <td><%= system.serial %></td>
+    <td><%= system.version %></td>
+    <td><%= system.endpoint %></td>
+    <td><%= system.ipaddress %></td>
+    <td><%= system.accessmethod %></td>
+    <td><%= link_to :show.l, system, class: 'btn btn-success' %></td>
+    <td><%= link_to :edit.l, edit_system_path(system), class: 'btn btn-info' %></td>
+    <td><%= link_to :destroy.l, system, method: :delete, class: 'btn btn-danger', data: { confirm: :are_you_sure.l } %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to :new.l(name: 'System'), new_system_path, class: 'btn btn-primary' %>
+</p>
